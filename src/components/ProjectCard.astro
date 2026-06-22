@@ -1,0 +1,14 @@
+---
+const { title, description, tools = [] } = Astro.props;
+---
+
+<article class="project-card">
+  <h3>{title}</h3>
+  <p>{description}</p>
+
+  {tools.length > 0 && (
+    <ul class="tag-list">
+      {tools.map((tool) => <li>{tool}</li>)}
+    </ul>
+  )}
+</article>

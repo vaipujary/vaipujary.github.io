@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<BaseLayout title="Projects | Vaidehi Pujary">
+  <section class="page-header">
+    <p class="eyebrow">Projects</p>
+    <h1>Selected technical work</h1>
+    <p>
+      Projects in optics, computational imaging, instrumentation, signal processing,
+      and computer vision.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="card-grid">
+      <ProjectCard
+        title="Atmospheric Turbulence Imaging Simulation"
+        description="Modeled wave propagation and imaging through atmospheric turbulence for distant object imaging."
+        tools={["Python", "Fourier optics", "Turbulence"]}
+      />
+
+      <ProjectCard
+        title="Optical Metrology Module"
+        description="Designed and implemented a vision-based particle sizing and tracking workflow."
+        tools={["OpenCV", "Python", "Computer vision"]}
+      />
+
+      <ProjectCard
+        title="R&D Test Automation"
+        description="Automated optoelectronic component characterization workflows using Python and instrument control."
+        tools={["Python", "SCPI", "Data analysis"]}
+      />
+    </div>
+  </section>
+</BaseLayout>

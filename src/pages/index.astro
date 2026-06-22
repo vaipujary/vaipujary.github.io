@@ -1,17 +1,53 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Vaidehi Pujary | Portfolio">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Electrical & Computer Engineering</p>
+      <h1>Hi, I’m Vaidehi</h1>
+
+      <p class="hero-subtitle">
+        I’m a graduate student interested in optics, computational imaging,
+        signal processing, and optical metrology.
+      </p>
+
+      <div class="button-row">
+        <a class="button primary" href="/projects">View Projects</a>
+        <a class="button secondary" href="/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <a class="button secondary" href="/contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <p>Future De Stijl / Fibonacci visual</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">Selected Work</p>
+    <h2>Projects at the intersection of light, computation, and measurement.</h2>
+
+    <div class="card-grid">
+      <ProjectCard
+        title="Atmospheric Turbulence Imaging Simulation"
+        description="Simulation work exploring imaging through atmospheric turbulence and super-resolution concepts for distant objects."
+        tools={["Python", "Fourier optics", "Wave propagation"]}
+      />
+
+      <ProjectCard
+        title="Optical Metrology Module"
+        description="Real-time particle sizing and tracking system using computer vision and optical measurement."
+        tools={["Python", "OpenCV", "Optical metrology"]}
+      />
+
+      <ProjectCard
+        title="Phase-Shifting Interferometry Simulation"
+        description="Simulation work for optical surface metrology, including phase-shifting and two-wavelength analysis."
+        tools={["Python", "Interferometry", "Simulation"]}
+      />
+    </div>
+  </section>
+</BaseLayout>
